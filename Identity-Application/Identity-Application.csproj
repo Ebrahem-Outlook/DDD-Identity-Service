@@ -11,4 +11,19 @@
     <ProjectReference Include="..\Identity-Domain\Identity-Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Users\Commands\DeleteUser\" />
+    <Folder Include="Users\Commands\UpdateUser\" />
+    <Folder Include="Users\Events\UserDeleted\" />
+    <Folder Include="Users\Events\UserUpdated\" />
+    <Folder Include="Users\Events\UserCreated\" />
+    <Folder Include="Users\Queries\GetById\" />
+    <Folder Include="Users\Queries\GetByName\" />
+    <Folder Include="Users\Queries\GetByEmail\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.3.0" />
+  </ItemGroup>
+
 </Project>

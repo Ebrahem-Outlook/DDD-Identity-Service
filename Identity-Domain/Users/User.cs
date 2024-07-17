@@ -6,9 +6,8 @@ namespace Identity_Domain.Users;
 
 public sealed class User : AggregateRoot<UserId>
 {
-    private User(UserId userId, FirstName firstName, LastName lastName, Email email, Password password)
+    private User(FirstName firstName, LastName lastName, Email email, Password password)
     {
-        UserId = userId;
         FirstName = firstName;
         LastName = lastName;
         Email = email;
@@ -23,11 +22,11 @@ public sealed class User : AggregateRoot<UserId>
     public Email Email { get; private set; } = default!;
     public Password Password { get; private set; } = default!;
 
-    public static User Create(FirstName firstName, LastName, Email email, Password password)
+    public static User Create(FirstName firstName, LastName lastName, Email email, Password password)
     {
         User user = new User(firstName, lastName, email, password);
 
-        user.Raise(new UserCreatedEvent(user.Id, user.FirstName, user.LastName, user.Email, user.Password ));
+        user.Raise(new UserCreatedEvent(user.FirstName, user.LastName, user.Email, user.Password ));
 
         return user;
     }

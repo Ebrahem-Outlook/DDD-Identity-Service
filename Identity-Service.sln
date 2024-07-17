@@ -5,11 +5,11 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.API", "Identity.API\Identity.API.csproj", "{C4BDA004-D45D-4877-9E81-2F2043463679}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity-Domain", "Identity-Domain\Identity-Domain.csproj", "{10EC2240-7505-4AF4-A8B5-2B9F6663CE8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Domain", "Identity-Domain\Identity.Domain.csproj", "{10EC2240-7505-4AF4-A8B5-2B9F6663CE8C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity-Application", "Identity-Application\Identity-Application.csproj", "{A3C7D775-11CF-4E92-990D-56C52993F0AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Application", "Identity-Application\Identity.Application.csproj", "{A3C7D775-11CF-4E92-990D-56C52993F0AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity-Infrastrucutre", "Identity-Infrastrucutre\Identity-Infrastrucutre.csproj", "{950C7C2F-7D53-434E-B910-0D3989F974CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Identity.Infrastrucutre", "Identity-Infrastrucutre\Identity.Infrastrucutre.csproj", "{950C7C2F-7D53-434E-B910-0D3989F974CC}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{949AD431-0CFB-463B-9969-B82DFACC8D16}"
 EndProject

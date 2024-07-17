@@ -8,7 +8,7 @@ public interface IUserRepository
     void Delete(User user);
 
     // Queries.
-    Task<User> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
+    Task<User> GetUserByIdAsync(Guid id, CancellationToken cancellato = default);
     Task<User> GetByEmailAsync(string email, CancellationToken cancellationToken = default);
     Task<IQueryable<User>> GetByNameAsync(string name, CancellationToken cancellationToken = default);
 }

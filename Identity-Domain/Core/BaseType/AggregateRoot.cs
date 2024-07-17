@@ -2,7 +2,7 @@
 
 namespace Identity_Domain.Core.BaseType;
 
-public abstract class AggregateRoot : Entity
+public abstract class AggregateRoot<TId> : Entity<TId> where TId : class
 {
     protected AggregateRoot(Guid id) : base(id) { }
 

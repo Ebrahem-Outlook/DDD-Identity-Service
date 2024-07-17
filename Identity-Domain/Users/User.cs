@@ -1,9 +1,14 @@
-﻿namespace Identity_Domain.Users;
+﻿using Identity_Domain.Core.BaseType;
+using Identity_Domain.Users.Events;
+using Identity_Domain.Users.ValueObjects;
 
-public sealed class User
+namespace Identity_Domain.Users;
+
+public sealed class User : AggregateRoot<UserId>
 {
-    private User(string firstName, string lastName, string email, string password)
+    private User(UserId userId, FirstName firstName, LastName lastName, Email email, Password password)
     {
+        UserId = userId;
         FirstName = firstName;
         LastName = lastName;
         Email = email;
@@ -12,16 +17,17 @@ public sealed class User
 
     private User() { }
 
-    public string FirstName { get; private set; } = default!;
-    public string  LastName { get; private set; } = default!;
-    public string  Email { get; private set; } = default!;
-    public string Password { get; private set; } = default!;
+    public UserId UserId { get; } = default!;
+    public FirstName FirstName{ get; private set; } = default!;
+    public LastName LastName { get; private set; } = default!;
+    public Email Email { get; private set; } = default!;
+    public Password Password { get; private set; } = default!;
 
-    public static User Create(string firstName, string lastName, string email, string password)
+    public static User Create(FirstName firstName, LastName, Email email, Password password)
     {
         User user = new User(firstName, lastName, email, password);
 
-        user.Raise();
+        user.Raise(new UserCreatedEvent(user.Id, user.FirstName, user.LastName, user.Email, user.Password ));
 
         return user;
     }
